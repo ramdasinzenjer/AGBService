@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="srt.inz.agbservice"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+    
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+     <uses-permission android:name="android.permission.SEND_SMS" />
+     <uses-permission android:name="android.permission.CALL_PHONE" />
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+     <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="ApplicationPreference">
+      <receiver android:name="SrtMsgbroadcast">
+    <intent-filter> 
+        <action android:name="android.provider.Telephony.SMS_RECEIVED"/> 
+    </intent-filter> 
+</receiver>
+        <activity
+            android:name=".MainPage"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:enabled="true" android:name="SrtService" />
+        <activity android:name="MainHome"></activity>
+    </application>
+
+</manifest>

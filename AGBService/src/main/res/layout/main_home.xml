@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gas_bgg" >
+
+    <TextView
+        android:id="@+id/mtxtpre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="136dp"
+        android:text="Previous Bookig Details :"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic" />
+
+    <ListView
+        android:id="@+id/mlistdet"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mtxtpre"
+        android:layout_below="@+id/mtxtpre" 
+        android:padding="10dp">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/mtxtcustm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="Welcome Customer"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic" />
+
+</RelativeLayout>
